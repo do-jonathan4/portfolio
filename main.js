@@ -1,15 +1,35 @@
-// var topOfDiv = document.getElementById("p2").offsetTop;
-// var divHeight = document.getElementById("p3").offsetHeight;
-// window.scrollTo({ top: (topOfDiv+divHeight), behavior: 'smooth' });
+const home = document.getElementById('home')
+const about = document.getElementById('about')
+const tech = document.getElementById('tech')
+const projects = document.getElementById('projects')
+const contact = document.getElementById('contact')
 
-const p1 = document.getElementById('p1')
-const p2 = document.getElementById('p2')
-const p3 = document.getElementById('p3')
-const p4 = document.getElementById('p4')
+// window.addEventListener("scroll", function() {
+//     const aboutSec = about.offsetTop;
+//     const techSec = tech.offsetTop;
+//     const divHeight = tech.offsetHeight;
+//     // executes on #about 
+//     if (window.scrollY > aboutSec && window.scrollY < techSec) {
+//         window.scrollTo({ top: (aboutSec+divHeight), behavior: 'smooth' });
+//     }
+// })
+// window.addEventListener('wheel', checkScrollDirection);
 
-window.addEventListener("scroll", function() {
-    var elementTarget = document.getElementById("p2");
-    if (window.scrollY > (elementTarget.offsetTop + elementTarget.offsetHeight)) {
-        console.log("You've scrolled past p2");
-    }
-  });
+// function checkScrollDirection(event) {
+//   if (checkScrollDirectionIsUp(event)) {
+//     console.log('UP');
+//   } else {
+//     console.log('Down');
+//     window.scroll({top: tech.offsetTop, behavior: 'smooth'})
+//   }
+// }
+// function checkScrollDirectionIsUp(event) {
+//     console.log(event.wheelDelta)
+//     if (event.wheelDelta) {
+//       return event.wheelDelta > 0;
+//     }
+//     return event.deltaY < 0;
+//   }
+
+about.scrollIntoView({behavior: "smooth"});
+
