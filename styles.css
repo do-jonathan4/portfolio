@@ -2,17 +2,18 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 li {
     display: inline;
 }
 div {
-    height: 100vh;
+    min-height: 50vh;
     overflow: scroll;
 }
 div:nth-child(even) {
-    background-color: cornflowerblue
+    background-color: #121212;
 }
 div:nth-child(odd) {
-    background-color: pink
+    background-color: #171717 
 }
