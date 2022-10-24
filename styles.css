@@ -11,13 +11,14 @@
 body {
     background-color: #212121;
 }
-body div {
+section div {
     min-height: 50vh;
     text-align: center;
 }
 body div h1 {
     margin: 5px 100px;
 }
+/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -36,27 +37,74 @@ header .logo {
     letter-spacing: 2px;
     transition: 0.6s;
 }
-/* transition */
 header.sticky {
     padding: 5px 100px;
     background: #373737;
 }
-header ul {
+header .navbar-links ul {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header ul li {
-    position: relative;
+header .navbar-links ul li {
     list-style: none;
+    padding: .5em;
+    border-radius: 25px
 }
-header ul li a {
-    position: relative;
+header .navbar-links ul li:hover {
+    background-color: pink;
+    transition: 0.8s; 
+}
+header .navbar-links ul li a {
     margin: 0 15px;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.6s;
 }
+/* MOBILE HEADER */
+.toggle-button {
+    position: absolute;
+    right: 40px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
 
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+    .navbar-links ul li {
+        text-align: center;
+    }
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
