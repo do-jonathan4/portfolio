@@ -1,19 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    color: #fff;
 }
-li {
-    display: inline;
+body {
+    background-color: #212121;
 }
-div {
+section div {
     min-height: 50vh;
-    overflow: scroll;
+    text-align: center;
 }
-div:nth-child(even) {
-    background-color: #121212;
+body div h1 {
+    margin: 5px 100px;
 }
-div:nth-child(odd) {
-    background-color: #171717 
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+}
+header .logo {
+    position: relative;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header.sticky {
+    padding: 5px 100px;
+    background: #373737;
+}
+header .navbar-links ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .navbar-links ul li {
+    list-style: none;
+    padding: .5em;
+    border-radius: 10px;    
+}
+header .navbar-links ul li:hover {
+    background-color: pink;
+    transition: 0.8s; 
+}
+header .navbar-links ul li a {
+    margin: 0 15px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+/* MOBILE HEADER */
+header .toggle-button {
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: #373737;
+        padding: 0;
+        height: 60px;
+    }
+    header.sticky {
+        padding: 0;
+    }
+    header .logo {
+        margin: 0;
+        margin-left: 50px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    header .toggle-button {
+        display: flex;
+    }
+    header .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    header .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+        background-color: #444444;
+        margin-top: 60px;
+    }
+    header .navbar-links ul li {
+        text-align: center;
+        padding: .8em;
+        width: 100%;
+    }
+    header .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+    header .navbar-links.active {
+        display: flex; 
+    }
 }
