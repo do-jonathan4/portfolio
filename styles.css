@@ -17,9 +17,11 @@ section div {
     text-align: center;
 }
 body div h1 {
-    padding: 70px 100px;
-    font-size: 5vh;
+    padding-top: 70px;
+    /* padding: 70px 100px; */
+    font-size: 4vh;
     text-decoration: none;
+    font-weight:normal
 }
 /* HEADER */
 header {
@@ -56,7 +58,7 @@ header .navbar-links ul li {
     border-radius: 10px;    
 }
 header .navbar-links ul li:hover {
-    background-color: pink;
+    background-color: cornflowerblue;
     transition: 0.8s; 
 }
 header .navbar-links ul li a {
@@ -91,27 +93,29 @@ section #home {
     font-size: 50px;
 }
 section #home p {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange; }
-  }
+    width: 14ch;
+    animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+}
+@keyframes typing {
+    from {
+        width: 0
+    }
+} 
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}
+section #home p span {
+    color: cornflowerblue;
+}
+section #about div img {
+    height: 300px;
+    width: 300px;
+}
 @media (max-width: 800px) {
     header {
         flex-direction: column;
