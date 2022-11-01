@@ -3,8 +3,12 @@ const about = document.getElementById('about')
 const tech = document.getElementById('tech')
 const projects = document.getElementById('projects')
 const contact = document.getElementById('contact')
+
 const toggleButton = document.querySelector('.toggle-button')
 const navbarLinks = document.querySelector('.navbar-links')
+const openingTag = document.querySelectorAll('.opening')
+const closingTag = document.getElementsByClassName('closing')
+const homeIntro = document
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header')
