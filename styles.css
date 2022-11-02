@@ -12,7 +12,7 @@ body {
     background-color: #212121;
 }
 /* CHANGE ME */
-section div {
+#home, #about, #tech, #projects, #contact {
     min-height: 99vh;
     text-align: center;
 }
@@ -98,6 +98,7 @@ section #home p {
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid;
+    font-size: 5vh;
 }
 @keyframes typing {
     from {
@@ -115,6 +116,16 @@ section #home p span {
 section #about div img {
     height: 300px;
     width: 300px;
+}
+section #about div div {
+    width: 50%;
+}
+section #about * {
+    border: 1px solid cornflowerblue;
+}
+section #about .container {
+    display: flex;
+    justify-content: space-between;
 }
 @media (max-width: 800px) {
     header {
@@ -158,5 +169,11 @@ section #about div img {
     }
     header .navbar-links.active {
         display: flex; 
+    }
+    section #home p {
+        font-size: 2rem;
+    }
+    section #about .container {
+        display: block;
     }
 }
