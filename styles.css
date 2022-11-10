@@ -123,8 +123,7 @@ section #about .container {
 section #about .container div {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    line-height: 1.5;
+    gap: 10px;
     font-size: large;
     width: 50%;
 }
@@ -201,7 +200,8 @@ section #tech .container-tech img {
     }
     section #about .container img {
         order: 1;
-        width: 80%;
+        width: 70%;
+        height: 70%;
     }
     section #about .container div {
         order: 2;
