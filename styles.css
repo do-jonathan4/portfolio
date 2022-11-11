@@ -144,6 +144,17 @@ section #tech .container-tech img {
     margin: 20px 30px;
     border-radius: 20px;
 }
+section #projects img {
+    width: 250px;
+    border: 2px solid cornflowerblue;
+}
+section #projects .container-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
 @media (max-width: 800px) {
     header {
         flex-direction: column;

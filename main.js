@@ -82,3 +82,19 @@ const projectsArray = [
     git: 'https://github.com/do-jonathan4/character-count-app'
   }
 ]
+
+projectsArray.forEach(x => {
+  const containerTech = document.querySelector('.container-projects')
+  const item = document.createElement("div")
+  item.classList.add("item")
+  item.innerHTML = `
+    <a href="${x.link}" target="_blank" class="btn-light">
+      <img src="assets/projects/${x.img}" alt="project" srcset="">
+    </a>
+    <p class="title">${x.title}</p>
+    <a href="${x.git}" target="_blank" class="btn-dark">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  `
+  containerTech.append(item)
+})
