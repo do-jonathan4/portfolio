@@ -35,6 +35,7 @@ header {
     align-items: center;
     transition: 0.6s;
     padding: 40px 100px;
+    z-index: 100;
 }
 header .logo {
     position: relative;
@@ -123,6 +124,7 @@ section #about .container {
 section #about .container div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
     font-size: large;
     width: 50%;
@@ -144,16 +146,47 @@ section #tech .container-tech img {
     margin: 20px 30px;
     border-radius: 20px;
 }
-section #projects img {
-    width: 250px;
-    border: 2px solid cornflowerblue;
-}
 section #projects .container-projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     text-align: center;
+}
+section #projects .item {
+    width: 250px;
+    position: relative;
+}
+section #projects .item img {
+    width: 100%;
+    transition: .6s ease;
+    border: 3px solid #373737;
+}
+section #projects .text-bottom, .text-top {
+    position: absolute;
+    background-color: #373737;
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: flex;
+    align-items:center;
+    justify-content:center; 
+    width: 100%;
+    height: 20%;
+    transition: .6s ease;
+    opacity: 0;
+}
+section #projects .text-top {
+    top: 0;
+}
+section #projects .text-bottom {
+    bottom: 30px;
+}
+section #projects .item:hover img {
+    opacity: 0.5;
+}
+section #projects .item:hover .text-top, section #projects .item:hover .text-bottom {
+    opacity: 1;
 }
 @media (max-width: 800px) {
     header {
@@ -222,5 +255,15 @@ section #projects .container-projects {
     section #tech .container-tech img {
         height: 100px;
         margin: 10px;
+    }
+    section #projects .item {
+        width: 60%;
+    }
+    section #projects .item img {
+        opacity: 0.5;
+        border: none;
+    }
+    section #projects .text-bottom, .text-top {
+        opacity: 1;
     }
 }
