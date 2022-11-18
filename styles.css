@@ -160,11 +160,11 @@ section #projects .item {
 section #projects .item img {
     width: 100%;
     transition: .6s ease;
-    border: 3px solid #373737;
+    border: 3px solid cornflowerblue;
 }
 section #projects .text-bottom, .text-top {
     position: absolute;
-    background-color: #373737;
+    background-color: cornflowerblue;
     color: white;
     border: none;
     text-decoration: none;
