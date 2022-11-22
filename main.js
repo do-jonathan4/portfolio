@@ -1,7 +1,5 @@
 const toggleButton = document.querySelector('.toggle-button')
 const navbarLinks = document.querySelector('.navbar-links')
-const openingTag = document.querySelectorAll('.opening')
-const closingTag = document.getElementsByClassName('closing')
 
 window.addEventListener('scroll', () => {
   const header = document.querySelector('header')
@@ -32,10 +30,10 @@ const techIcons = [
   'icon-3-Webpack.png'
 ]
 techIcons.forEach(x => {
-  const containerTech = document.querySelector('.container-tech')
+  const tech = document.querySelector('#tech')
   const iconImg = document.createElement('img')
   iconImg.src = 'assets/icons/' + x
-  containerTech.append(iconImg)
+  tech.children[1].append(iconImg)
 })
 
 const projectsArray = [
@@ -84,14 +82,14 @@ const projectsArray = [
 ]
 
 projectsArray.forEach(x => {
-  const containerTech = document.querySelector('.container-projects')
+  const projects = document.querySelector('#projects')
   const item = document.createElement("div")
   item.classList.add("item")
   item.innerHTML = `
     <img src="assets/projects/${x.img}">
-    <a href="${x.git}" target="_blank" class="text-top">Github</a>
-    <a href="${x.link}" target="_blank" class="text-bottom">Demo</a>
+    <a href="${x.git}" target="_blank" class="text-top flex">Github</a>
+    <a href="${x.link}" target="_blank" class="text-bottom flex">Demo</a>
     <p class="title">${x.title}</p>
   `
-  containerTech.append(item)
+  projects.children[1].append(item)
 })

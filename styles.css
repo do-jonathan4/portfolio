@@ -25,6 +25,11 @@ body div h1 {
     font-weight:normal;
     text-align: center;
 }
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* HEADER */
 header {
     position: fixed;
@@ -51,9 +56,6 @@ header.sticky {
 }
 header .navbar-links ul {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 header .navbar-links ul li {
     list-style: none;
@@ -89,13 +91,10 @@ header .toggle-button .bar {
     background-color: white;
     border-radius: 10px;
 }
-section #home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#home {
     font-size: 50px;
 }
-section #home p {
+#home p {
     width: 14ch;
     animation: typing 2s steps(22), blink .5s step-end infinite alternate;
     white-space: nowrap;
@@ -113,85 +112,72 @@ section #home p {
         border-color: transparent
     }
 }
-section #home p span {
+#home p span {
     color: cornflowerblue;
 }
-section #about .container {
-    display: flex;
-    flex-direction: row;
+#about .flex {
     justify-content: space-around;
 }
-section #about .container div {
-    display: flex;
+#about .flex div {
     flex-direction: column;
-    justify-content: center;
     gap: 10px;
     font-size: large;
     width: 50%;
 }
-section #about .container img {
+#about .flex img {
     height: 300px;
     width: 300px;
     border: 5px solid cornflowerblue;
     border-radius: 50%;
 }
-section #tech .container-tech {
-    display: flex;
+#tech .flex {
     flex-wrap: wrap;
-    justify-content: center;
 }
-section #tech .container-tech img {
+#tech .flex img {
     height: 150px;
     background-color: white;
     margin: 20px 30px;
     border-radius: 20px;
 }
-section #projects .container-projects {
-    display: flex;
+#projects .flex {
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
     text-align: center;
 }
-section #projects .item {
+#projects .item {
     width: 250px;
     position: relative;
 }
-section #projects .item img {
+#projects .item img {
     width: 100%;
     transition: .6s ease;
     border: 3px solid cornflowerblue;
 }
-section #projects .text-bottom, .text-top {
+#projects .text-bottom, .text-top {
     position: absolute;
     background-color: cornflowerblue;
     color: white;
     border: none;
     text-decoration: none;
-    display: flex;
     align-items:center;
-    justify-content:center; 
     width: 100%;
     height: 20%;
     transition: .6s ease;
     opacity: 0;
 }
-section #projects .text-top {
+#projects .text-top {
     top: 0;
 }
-section #projects .text-bottom {
+#projects .text-bottom {
     bottom: 30px;
 }
-section #projects .item:hover img {
+#projects .item:hover img {
     opacity: 0.5;
 }
-section #projects .item:hover .text-top, section #projects .item:hover .text-bottom {
+#projects .item:hover .text-top, #projects .item:hover .text-bottom {
     opacity: 1;
 }
 #contact div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 20px;
     height: 20vh;
 }
@@ -246,39 +232,37 @@ section #projects .item:hover .text-top, section #projects .item:hover .text-bot
     header .navbar-links.active {
         display: flex; 
     }
-    section #home p {
+    #home p {
         font-size: 2rem;
     }
-    section #about .container {
-        display: flex;
+    #about .flex {
         flex-direction: column;
-        align-items: center;
     }
-    section #about .container p {
+    #about .flex p {
         margin-top: 10px;
     }
-    section #about .container img {
+    #about .flex img {
         order: 1;
         width: 70%;
         height: 70%;
     }
-    section #about .container div {
+    #about .flex div {
         order: 2;
         width: 90%;
         margin-top: 30px;
     }
-    section #tech .container-tech img {
+    #tech .flex img {
         height: 100px;
         margin: 10px;
     }
-    section #projects .item {
+    #projects .item {
         width: 60%;
     }
-    section #projects .item img {
+    #projects .item img {
         opacity: 0.5;
         border: none;
     }
-    section #projects .text-bottom, .text-top {
+    #projects .text-bottom, .text-top {
         opacity: 1;
     }
     #contact div {
