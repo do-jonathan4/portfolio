@@ -188,6 +188,21 @@ section #projects .item:hover img {
 section #projects .item:hover .text-top, section #projects .item:hover .text-bottom {
     opacity: 1;
 }
+#contact div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 20vh;
+}
+#contact a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: cornflowerblue;
+    border-radius: 10px;
+    min-width: 15%;
+    text-align: center;
+}
 @media (max-width: 800px) {
     header {
         flex-direction: column;
@@ -265,5 +280,11 @@ section #projects .item:hover .text-top, section #projects .item:hover .text-bot
     }
     section #projects .text-bottom, .text-top {
         opacity: 1;
+    }
+    #contact div {
+        flex-direction: column;
+    }
+    #contact a {
+        width: 60%;
     }
 }
