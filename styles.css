@@ -10,13 +10,17 @@
 }
 body {
     background-color: #212121;
+    flex-direction: column;
 }
-/* CHANGE ME */
 #home {
     height: 99vh;
 }
-#about, #tech, #projects, #contact {
-    min-height: 50vh;
+#about, #tech, #projects {
+    min-height: 60vh;
+    max-width: 1920px;
+}
+#contact {
+    min-height: 30vh;
 }
 body div h1 {
     padding: 60px;
@@ -60,18 +64,19 @@ header .navbar-links ul {
 header .navbar-links ul li {
     list-style: none;
     padding: .5em;
-    border-radius: 10px;    
+    border-radius: 10px;
 }
-header .navbar-links ul li:hover {
+header .navbar-links ul a:hover {
     background-color: cornflowerblue;
     transition: 0.8s; 
 }
 header .navbar-links ul li a {
-    margin: 0 15px;
     text-decoration: none;
     letter-spacing: 2px;
     font-weight: 500px;
     transition: 0.6s;
+    padding: .5em 1em;
+    border-radius: 10px;
 }
 /* MOBILE HEADER */
 header .toggle-button {
@@ -186,7 +191,8 @@ header .toggle-button .bar {
     padding: 10px;
     background-color: cornflowerblue;
     border-radius: 10px;
-    min-width: 15%;
+    width: 15%;
+    max-width: 200px;
     text-align: center;
 }
 @media (max-width: 800px) {
@@ -262,7 +268,7 @@ header .toggle-button .bar {
         opacity: 0.5;
         border: none;
     }
-    #projects .text-bottom, .text-top {
+    #projects .text-bottom, #projects .text-top {
         opacity: 1;
     }
     #contact div {
