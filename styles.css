@@ -189,11 +189,15 @@ header .toggle-button .bar {
 #contact a {
     text-decoration: none;
     padding: 10px;
-    background-color: cornflowerblue;
+    background-color: #373737;
     border-radius: 10px;
     width: 15%;
     max-width: 200px;
     text-align: center;
+}
+#contact a:hover {
+    background-color: cornflowerblue;
+    transition: .8s;
 }
 @media (max-width: 800px) {
     header {
